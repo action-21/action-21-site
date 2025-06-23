@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "engines": {
-    "node": "23",
-    "npm": "11"
+    "node": "23.6",
+    "npm": "10.1"
   },
   "scripts": {
     "dev": "astro dev",
