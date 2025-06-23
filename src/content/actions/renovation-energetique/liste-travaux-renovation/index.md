@@ -72,7 +72,7 @@ Plusieurs stratégies sont à l'étude :
 - Données issues des aides au financement
 - Données issues des tiers-accompagnateurs
 - Données issues du Carnet d'information du logement
-- Données issues du [Référentiel national des travaux de rénovation](https://action-21.fr/actions/renovation-energetique/referentiel-national-travaux-renovation)
+- Données issues du [Référentiel national des travaux de rénovation](https://action21.fr/actions/renovation-energetique/referentiel-national-travaux-renovation)
 
 Les avantages et inconvénients de ces stratégies sont exposés sur le dépôt du projet.
 
@@ -88,5 +88,5 @@ Données publiées sur [data.gouv.fr](https://data.gouv.fr).
 
 ## ❣️ Contribuer
 
-- [Sur GitHub](https://github.com/actoin-21/liste-travaux-renovation)
+- [Sur GitHub](https://github.com/action-21/liste-travaux-renovation)
 - [Sur Discord](https://discord.com/channels/1385249065536720966/1385892491789598773)

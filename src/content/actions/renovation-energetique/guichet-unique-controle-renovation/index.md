@@ -71,4 +71,4 @@ Intégré au service public de la rénovation énergétique, cet outil centralis
 
 ## ❣️ Contribuer
 
-- [Sur GitHub](https://github.com/actoin-21/guichet-unique-controle-renovation)
+- [Sur GitHub](https://github.com/action-21/guichet-unique-controle-renovation)

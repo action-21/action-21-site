@@ -1,6 +1,6 @@
 ## Mentions légales
 
-Mentions légales obligatoires du site https://action-21.fr.
+Mentions légales obligatoires du site https://action21.fr.
 
 ### Edition du site
 
@@ -22,6 +22,6 @@ Le site est l'ensemble de son contenu est soumis à une [licence MIT](https://gi
 
 ### Politique de confidentialité des données
 
-Le site https://action-21.fr n'utilise **aucun cookie ni aucune autre technologie de collecte** des informations personnelles des internautes.
+Le site https://action21.fr n'utilise **aucun cookie ni aucune autre technologie de collecte** des informations personnelles des internautes.
 
-Le code source du site https://action-21.fr est librement accessible à l'adresse suivante: https://github.com/action-21/action-21.
+Le code source du site https://action21.fr est librement accessible à l'adresse suivante: https://github.com/action-21/action-21.

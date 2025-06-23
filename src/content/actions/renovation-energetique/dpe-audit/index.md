@@ -74,5 +74,5 @@ Une migration des données de l'observatoire DPE-Audit vers le nouveau standard 
 
 ## ❣️ Contribuer
 
-- [Sur GitHub](https://github.com/actoin-21/dpe-audit)
+- [Sur GitHub](https://github.com/action-21/dpe-audit)
 - [Sur Discord](https://discord.com/channels/1385249065536720966/1386627800978554895)

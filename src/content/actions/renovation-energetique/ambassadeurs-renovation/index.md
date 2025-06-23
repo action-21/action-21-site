@@ -76,4 +76,4 @@ L'objectif est d'étendre le projet à l'ensemble des organismes de formation du
 
 ## ❣️ Contribuer
 
-- [Sur GitHub](https://github.com/actoin-21/ambassadeurs-renovation)
+- [Sur GitHub](https://github.com/action-21/ambassadeurs-renovation)

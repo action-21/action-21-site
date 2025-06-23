@@ -85,4 +85,4 @@ Données publiées sur [data.gouv.fr](https://data.gouv.fr).
 
 ## ❣️ Contribuer
 
-- [Sur GitHub](https://github.com/actoin-21/liste-controles-travaux-renovation)
+- [Sur GitHub](https://github.com/action-21/liste-controles-travaux-renovation)
