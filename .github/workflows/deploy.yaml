@@ -1,14 +1,10 @@
 name: Déployer sur GitHub Pages
 
 on:
-  # Déclenchez le workflow chaque fois que vous poussez vers la branche `main`
-  # Vous utilisez un nom de branche différent ? Remplacez `main` par le nom de votre branche
   push:
     branches: [main]
-  # Vous permet d'exécuter ce workflow manuellement à partir de l'onglet Actions sur GitHub.
   workflow_dispatch:
 
-# Autoriser cette tâche à cloner le dépôt et à créer un déploiement de page
 permissions:
   contents: read
   pages: write
@@ -16,12 +12,34 @@ permissions:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Extraire votre dépôt à l'aide de git
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Installer, compiler et télécharger votre site
-        uses: withastro/action@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "23.6"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Build with Astro
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
