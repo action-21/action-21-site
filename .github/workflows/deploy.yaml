@@ -1,0 +1,34 @@
+name: Déployer sur GitHub Pages
+
+on:
+  # Déclenchez le workflow chaque fois que vous poussez vers la branche `main`
+  # Vous utilisez un nom de branche différent ? Remplacez `main` par le nom de votre branche
+  push:
+    branches: [main]
+  # Vous permet d'exécuter ce workflow manuellement à partir de l'onglet Actions sur GitHub.
+  workflow_dispatch:
+
+# Autoriser cette tâche à cloner le dépôt et à créer un déploiement de page
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extraire votre dépôt à l'aide de git
+        uses: actions/checkout@v4
+      - name: Installer, compiler et télécharger votre site
+        uses: withastro/action@v3
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Déployer sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

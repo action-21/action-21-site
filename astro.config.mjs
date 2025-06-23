@@ -6,6 +6,8 @@ import rehypeMermaid from 'rehype-mermaid'
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://action-21.fr',
+
   vite: {
     plugins: [tailwindcss()]
   },
