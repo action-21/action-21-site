@@ -1,8 +1,13 @@
 {
   "name": "app",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "engines": {
+    "node": "23",
+    "npm": "10"
+  },
   "scripts": {
+    "start": "astro sync && astro build",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
