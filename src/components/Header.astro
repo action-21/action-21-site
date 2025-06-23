@@ -1,0 +1,48 @@
+---
+import Logo from "../assets/logo.svg";
+
+const pathname = Astro.url.pathname;
+const paths = [
+    { href: "/programmes", title: "Programmes", match: "/programmes" },
+    { href: "/actions", title: "Actions", match: "/actions" },
+    { href: "/docs", title: "Documentation", match: "/docs" },
+];
+---
+
+<header class="bg-white shadow-sm px-6">
+    <div class="container">
+        <div class="navbar">
+            <div class="flex-1">
+                <a href="/">
+                    <Logo class="inline-block" width={120} />
+                </a>
+            </div>
+            <nav class="flex items-center">
+                {
+                    paths.map((path) => (
+                        <a
+                            href={path.href}
+                            class:list={[
+                                { active: pathname.includes(path.match) },
+                            ]}
+                        >
+                            {path.title}
+                        </a>
+                    ))
+                }
+            </nav>
+        </div>
+    </div>
+</header>
+
+<style>
+    nav a {
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        opacity: 70%;
+
+        &.active {
+            opacity: 100%;
+        }
+    }
+</style>

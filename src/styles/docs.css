@@ -1,0 +1,10 @@
+.site-title {
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}

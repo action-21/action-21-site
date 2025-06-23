@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "ccca-btp",
+    "nom": "CCCA-BTP",
+    "description": "Comité de concertation et de coordination de l'apprentissage du bâtiment et des travaux publics",
+    "avatar": "https://www.winlab-cccabtp.com/themes/custom/winlab/img/new-logo--ccca-btp.svg",
+    "site": "https://www.ccca-btp.fr"
+  },
+  {
+    "slug": "btp-cfa-occitanie",
+    "nom": "BTP-CFA Occitanie",
+    "description": "Réseau des centres de formation d'apprentis du BTP en Occitanie",
+    "avatar": "https://www.btpcfa-occitanie.com/themes/custom/bco/logo.svg",
+    "site": "https://www.btpcfa-occitanie.com"
+  }
+]

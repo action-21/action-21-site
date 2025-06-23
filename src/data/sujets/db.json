@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "agriculture",
+    "titre": "Agriculture"
+  },
+  {
+    "slug": "batiment",
+    "titre": "Bâtiment"
+  },
+  {
+    "slug": "industrie",
+    "titre": "Industrie"
+  },
+  {
+    "slug": "transport",
+    "titre": "Transport"
+  },
+  {
+    "slug": "energie",
+    "titre": "Energie"
+  },
+  {
+    "slug": "emplois-competences",
+    "titre": "Emplois et compétences"
+  }
+]

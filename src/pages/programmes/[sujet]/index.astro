@@ -1,0 +1,55 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { ProgrammeCollection } from "../../../components/Programme";
+
+export async function getStaticPaths() {
+    const sujets = await getCollection("sujets");
+    return sujets.map((sujet) => ({
+        params: { sujet: sujet.id },
+        props: { sujet },
+    }));
+}
+
+const { sujet } = Astro.props;
+---
+
+<Layout
+    title={`Programmes par sujet - ${sujet.data.titre}`}
+    description="Liste des Programmes d'Action 21 par sujet"
+>
+    <section class="section">
+        <div class="container">
+            <div class="card bg-white">
+                <div class="card-body border-b border-gray-400">
+                    <div class="breadcrumbs text-sm">
+                        <ul>
+                            <li><a href="/programmes">Programmes</a></li>
+                            <li>{sujet.data.titre}</li>
+                        </ul>
+                    </div>
+
+                    <h1 class="h1">Programmes</h1>
+
+                    <p class="mb-2">
+                        Une suggestion ? Une proposition ? Vos contributions
+                        sont les bienvenues pour enrichir nos domaines
+                        d'intervention.
+                    </p>
+
+                    <div class="card-actions">
+                        <a
+                            href="/docs/contribuer"
+                            class="btn btn-outline btn-primary"
+                        >
+                            Contribuer ->
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body gap-8">
+                    <ProgrammeCollection sujets={[sujet.id]} />
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

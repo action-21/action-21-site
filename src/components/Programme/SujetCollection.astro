@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+const sujets = await getCollection("sujets");
+---
+
+<div class="flex flex-wrap items-center gap-4">
+    {
+        sujets.map((item) => (
+            <a
+                href={`/programmes/${item.id}`}
+                class="item btn btn-outline rounded-none"
+            >
+                {item.data.titre}
+            </a>
+        ))
+    }
+</div>
+
+<style>
+    .item {
+        border-width: 1px;
+    }
+</style>

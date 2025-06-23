@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "eric-combeau",
+    "nom": "Eric Combeau",
+    "description": "Consultant en innovation digitale dans le BTP",
+    "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQHJwXU543mfmg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677106677633?e=1755734400&v=beta&t=7RKUALejAgzp4N_4q8yfwsLoWKkRByCmDXPzDywIme0",
+    "liens": [
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/eric-combeau-prescriplus"
+      }
+    ]
+  },
+  {
+    "slug": "adrien-rosi-dit-rozzi",
+    "nom": "Adrien Rosi dit Rozzi",
+    "description": "Consultant en stratégie publique de rénovation énergétique",
+    "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQHAHJzMng9acQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517575364731?e=1755734400&v=beta&t=e-ZLyMZmlhn9_4tuRNskMU-YpQm609Ij9ABTK3bPcEw",
+    "liens": [
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/adrienrosi"
+      }
+    ]
+  }
+]

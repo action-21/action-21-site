@@ -1,0 +1,91 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection, getEntries, render } from "astro:content";
+import { MembreCollection } from "../../../components/Membre";
+import { ActionCollection } from "../../../components/Action";
+
+export async function getStaticPaths() {
+    const entries = await getCollection("programmes");
+    return entries.map((entry) => ({
+        params: { slug: entry.data.slug },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const data = entry.data;
+const { Content } = await render(entry);
+const sujets = await getEntries(data.sujets);
+---
+
+<Layout title={data.titre} description={data.description}>
+    <div class="wrapper relative">
+        <section class="relative z-10 mt-0 pt-20">
+            <div class="container">
+                <article class="bg-white rounded-xs p-8">
+                    <header class="mb-10">
+                        <ul class="breadcrumb">
+                            {
+                                sujets.map((item) => (
+                                    <li>
+                                        <a href={`/programmes/${item.data.slug}`}>
+                                            {item.data.titre}
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+
+                        <h1 class="h1 my-4">{data.titre}</h1>
+
+                        <p>{data.description}</p>
+                    </header>
+
+                    <div class="content markdown-body">
+                        <Content />
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <header class="header">
+                    <h2 class="h2">Nos actions associées</h2>
+                </header>
+
+                <ActionCollection programmes={[data.slug]} />
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <header class="header">
+                    <h2 class="h2">Responsables de mission</h2>
+                </header>
+
+                <MembreCollection entries={data.membres} />
+            </div>
+        </section>
+
+        <div class="absolute top-0 left-0 w-full z-0">
+            <Image
+                src={data.image}
+                alt={data.titre}
+                class="w-full h-100 object-cover"
+            />
+        </div>
+    </div>
+</Layout>
+
+<style>
+    article {
+        header {
+            .breadcrumb {
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+</style>

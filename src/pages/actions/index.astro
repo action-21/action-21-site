@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { ActionCollection } from "../../components/Action";
+---
+
+<Layout
+    title="Nos actions"
+    description="Liste des actions portées ou soutenues par Action 21"
+>
+    <section class="section">
+        <div class="container">
+            <div class="card bg-white">
+                <div class="card-body border-b border-gray-400">
+                    <h1 class="h1">Actions</h1>
+                    <p class="mb-2">
+                        Toutes les actions que nous portons sont ouvertes aux contributions.
+                    </p>
+                    <div class="card-actions">
+                        <a href="/docs/contribuer" class="btn btn-outline btn-primary">
+                            Contribuer ->
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body gap-8">
+                    <ActionCollection />
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

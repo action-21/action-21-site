@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ProgrammeCollection } from "../components/Programme";
+import { ActionCollection } from "../components/Action";
+import { ContributeurCollection } from "../components/Contributeur";
+---
+
+<Layout
+	title="Action 21"
+	description="Le laboratoire de projets open source d'intérêt général, portés par les acteurs du changement."
+>
+	<section class="section">
+		<div class="container">
+			<div class="hero py-6">
+				<div class="hero-content text-center">
+					<div class="w-full">
+						<h1 class="text-5xl font-bold">
+							Agir <span class="text-primary">ensemble</span> pour
+							le bien <span class="text-secondary">commun</span>
+						</h1>
+						<p class="py-6">
+							Le laboratoire de projets open source d'intérêt
+							général, portés par les acteurs du changement.
+						</p>
+
+						<a class="btn btn-primary" href="/docs/contribuer">
+							Contribuer
+						</a>
+						<a class="btn btn-outline" href="/docs/association">
+							En savoir plus
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="max-w-sm m-auto">
+			<div class="divider divider-neutral"></div>
+		</div>
+	</div>
+
+	<section class="section text-center md:text-start">
+		<div class="container">
+			<header class="header">
+				<h2 class="h2">Nos Programmes</h2>
+				<p>
+					Toutes nos contributions s'inscrivent dans le cadre d'une
+					stratégie claire et cohérente sur un domaine ciblé.
+				</p>
+			</header>
+			<ProgrammeCollection />
+		</div>
+	</section>
+
+	<section class="section py-10 bg-indigo-100 text-center md:text-start">
+		<div class="container">
+			<header class="header">
+				<h2 class="h2">Nos Actions</h2>
+				<p>
+					Dans le cadre de nos Programmes, nous portons toutes les
+					Actions utiles à l'intérêt général.
+				</p>
+			</header>
+
+			<ActionCollection maxItems={5} />
+
+			<footer class="mt-8 text-center">
+				<a class="btn btn-primary btn-outline" href="/actions">
+					Toutes nos actions ->
+				</a>
+			</footer>
+		</div>
+	</section>
+
+	<section class="section text-center">
+		<div class="container">
+			<header class="header">
+				<h2 class="h2">Ils contribuent au changement</h2>
+				<p>
+					Collectivités, entreprises, associations, citoyens donnent
+					vie aux idées.
+				</p>
+			</header>
+
+			<ContributeurCollection />
+		</div>
+	</section>
+</Layout>
+
+
+<style>
+	body {
+		background-color: white;
+	}
+</style>

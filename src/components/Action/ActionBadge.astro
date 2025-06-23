@@ -1,0 +1,46 @@
+---
+interface Props {
+    etat: string;
+}
+
+const { etat } = Astro.props;
+
+const state = (state: string) => {
+    switch (state) {
+        case "investigation":
+            return "En cours d'investigation";
+        case "construction":
+            return "En cours de construction";
+        case "acceleration":
+            return "En cours d'accélération";
+        case "archive":
+            return "Archivé";
+        default:
+            return state;
+    }
+};
+---
+
+<div class="badge badge-soft font-medium" data-state={etat}>
+    {state(etat)}
+</div>
+
+<style>
+    .badge {
+        &[data-state="investigation"] {
+            background-color: var(--color-purple-100);
+            border-color: var(--color-purple-600);
+            color: var(--color-purple-600);
+        }
+        &[data-state="construction"] {
+            background-color: var(--color-teal-100);
+            border-color: var(--color-teal-600);
+            color: var(--color-teal-600);
+        }
+        &[data-state="acceleration"] {
+            background-color: var(--color-sky-100);
+            border-color: var(--color-sky-600);
+            color: var(--color-sky-600);
+        }
+    }
+</style>
