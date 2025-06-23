@@ -4,10 +4,9 @@
   "version": "1.0.0",
   "engines": {
     "node": "23",
-    "npm": "10"
+    "npm": "11"
   },
   "scripts": {
-    "start": "astro sync && astro build",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
