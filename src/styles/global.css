@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import 'github-markdown-css/github-markdown.css';
-@plugin "daisyui";
+@plugin "daisyui" {
+   themes: pastel --default;
+ }
 @plugin "daisyui/theme" {
   name: 'pastel';
   default: true;
