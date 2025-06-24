@@ -25,7 +25,8 @@ export default defineConfig({
       title: 'DOCS',
 
       logo: {
-        src: './src/assets/logo.svg'
+        light: './src/assets/logo.svg',
+        dark: './src/assets/logo-white.svg'
       },
 
       customCss: ['./src/styles/docs.css'],
